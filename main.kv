@@ -1,0 +1,129 @@
+#:kivy 1.9.2
+<Madre>:
+    canvas:
+        Color:
+            rgb: .3,.3,.9
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Menu>:
+	orientation: 'vertical'
+	canvas:
+		Color:
+			rgb: 0.1,0.1,0.1
+
+		Rectangle:
+			pos: self.pos
+			size: self.size
+	BoxLayout:
+		size_hint_y: .7
+		
+	BoxLayout:
+		orientation: 'vertical'
+		padding: [70,70,70,70]
+		spacing: 25		
+		BoxLayout:
+			MDRectangleFlatIconButton:
+			    icon: "android"
+			    text: "Go pantalla 1"
+			    on_press: root.go_sc1()
+			    theme_text_color: "Custom"
+			    text_color: app.theme_cls.primary_color
+    
+				
+		BoxLayout:
+			MDRectangleFlatIconButton:
+			    icon: "android"
+			    text: "Go pantalla 2"
+			    on_press: root.go_sc2()
+			    theme_text_color: "Custom"
+			    text_color: app.theme_cls.primary_color
+    
+		BoxLayout:
+			MDRectangleFlatIconButton:
+			    text: 'Go pantalla 3'
+			    on_press: root.go_sc3()
+			    icon: "android"
+			    theme_text_color: "Custom"
+			    text_color: app.theme_cls.primary_color
+    
+	BoxLayout:
+		size_hint_y: .5
+	BoxLayout:
+		size_hint_y: .3
+		padding: [25,25,25,25]
+		MDFillRoundFlatIconButton:
+			text: "Salir"
+			icon: "language-python"
+			on_press: app.stop()
+	BoxLayout:
+		size_hint_y: .1
+
+<LeftLabel@Label>:
+    text_size: self.size
+    halign: 'left'
+
+<ScreenUno>:
+	orientation: 'vertical'
+    canvas:
+        Color:
+            rgb: 0.2,0.2,0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            
+    BoxLayout:
+        size_hint_y: 5
+    BoxLayout: # ---------- atras o salir
+    	padding: [20,20,20,20]
+    	spacing: 15
+        Button:
+            text: 'atras'
+            on_press: root.go_menu()
+        Button:
+            text: 'Salir'
+            on_press: app.stop()
+
+
+<ScreenDos>:
+	orientation: 'vertical'
+    canvas:
+        Color:
+            rgb: 0.2,0.2,0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        size_hint_y: 5
+    BoxLayout: # ---------- atras o salir
+    	padding: [20,20,20,20]
+    	spacing: 15
+        Button:
+            text: 'atras'
+            on_press: root.go_menu()
+        Button:
+            text: 'Salir'
+            on_press: app.stop()
+			
+
+<ScreenTres>:
+	orientation: 'vertical'
+    canvas:
+        Color:
+            rgb: 0.2,0.2,0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            
+    BoxLayout:
+        size_hint_y: 5
+    BoxLayout: # ---------- atras o salir
+    	padding: [20,20,20,20]
+    	spacing: 15
+        Button:
+            text: 'atras'
+            on_press: root.go_menu()
+        Button:
+            text: 'Salir'
+            on_press: app.stop()
